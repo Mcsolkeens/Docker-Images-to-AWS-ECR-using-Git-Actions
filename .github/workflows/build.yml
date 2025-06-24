@@ -32,6 +32,6 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t app2ecr:lastest .
-          docker tag app:v1 public.ecr.aws/j6x6c3z0/app2ecr:latest
+          docker tag app2ecr:lastest public.ecr.aws/j6x6c3z0/app2ecr:latest
           docker push public.ecr.aws/j6x6c3z0/app2ecr:latest
 
