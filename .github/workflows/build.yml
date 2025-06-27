@@ -49,7 +49,7 @@ jobs:
      name: push to ecr registry-private
      runs-on: ubuntu-latest
      needs: 
-        build-and-push-ecr-public:
+      build-and-push-ecr-public
      steps:
       - name: Code Checkout 
         uses: actions/checkout@v4.2.2
