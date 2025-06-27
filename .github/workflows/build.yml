@@ -21,7 +21,7 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS }}
             aws-region: ${{ secrets.AWS_REGION }}
             
-  build-and-push-ecr:
+  build-and-push-ecr-public repo:
      name: push to ecr registry
      runs-on: ubuntu-latest
      needs: 
