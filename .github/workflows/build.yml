@@ -55,7 +55,7 @@ jobs:
       - name: Login to AWS ECR 
         uses: docker/login-action@v3
         with:
-          registry: public.ecr.aws
+          registry: 043309324225.dkr.ecr.us-east-1.amazonaws.com
           username: ${{ secrets.AWS_ACCESS_KEY }}
           password: ${{ secrets.AWS_SECRET_ACCESS }}
         env:
@@ -64,5 +64,5 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t app2ecr:latest .
-          docker tag app2ecr:latest public.ecr.aws/j6x6c3z0/app2ecr:latest
-          docker push public.ecr.aws/j6x6c3z0/app2ecr:latest
+          docker tag app2ecr:latest 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:latest
+          docker push 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:latest
