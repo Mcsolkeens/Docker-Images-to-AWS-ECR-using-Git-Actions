@@ -42,8 +42,8 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t app2ecr:latest .
-          docker tag app2ecr:latest public.ecr.aws/j6x6c3z0/app2ecr:latest
-          docker push public.ecr.aws/j6x6c3z0/app2ecr:latest
+          docker tag app2ecr:latest public.ecr.aws/j6x6c3z0/app2ecr:$GITHUB_RUN_ID
+          docker push public.ecr.aws/j6x6c3z0/app2ecr:$GITHUB_RUN_ID
 
    build-and-push-ecr-private:
      name: push to ecr registry-private
@@ -66,6 +66,6 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t app2ecr:latest .
-          docker tag app2ecr:latest 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:latest
-          docker push 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:latest
-          docker push 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:latest
+          docker tag app2ecr:latest 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:$GITHUB_RUN_ID
+          docker push 043309324225.dkr.ecr.us-east-1.amazonaws.com/app2ecr:$GITHUB_RUN_ID
+        
