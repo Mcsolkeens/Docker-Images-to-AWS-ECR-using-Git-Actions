@@ -1,12 +1,12 @@
 
 
-# 🚀 Build and Publish to AWS ECR
+#  Build and Publish to AWS ECR
 
 This GitHub Actions workflow automates the process of building a Docker image and pushing it to both **public and private AWS Elastic Container Registries (ECR)**. It's designed to run every time you push to the `main` branch — making deployment quick, consistent, and hands-off.
 
 ---
 
-## 📌 What This Workflow Does
+##  What This Workflow Does
 
 This workflow is made up of **three main steps**, all run in sequence:
 
@@ -21,7 +21,7 @@ This workflow is made up of **three main steps**, all run in sequence:
 
 ---
 
-## ⚙️ When It Runs
+##  Workflow trigger
 
 This workflow is triggered automatically on any push to the `main` branch:
 
@@ -34,7 +34,7 @@ on:
 
 ---
 
-## 🔐 Required GitHub Secrets
+## Required GitHub Secrets
 
 Make sure these secrets are configured in your GitHub repository:
 
@@ -46,7 +46,7 @@ Make sure these secrets are configured in your GitHub repository:
 
 ---
 
-## 🧱 Docker Build & Tag
+## Docker Build & Tag
 
 Each Docker image is:
 
@@ -60,7 +60,7 @@ Each Docker image is:
 
 ---
 
-## 🗂 File Layout
+## File Layout
 
 Here's a quick look at how things are structured:
 
@@ -82,7 +82,7 @@ To make sure everything works smoothly:
 
 ---
 
-## 📘 Extra Notes
+## Extra Notes
 
 * The workflow uses the official `aws-actions` and `docker/login-action` GitHub Actions for authentication and image pushing.
 * Each job runs on `ubuntu-latest` and is executed in order, ensuring the private push only happens after the public one succeeds.
